@@ -7,7 +7,7 @@ int main(){
   int arr[] = { 1, 8, 9, 2, 3, 0, 18, 90, 13, 11};
 
   print_array(arr, n);
-  selectionSort(arr, n);
+  insertionSort(arr, n);
   print_array(arr, n);
 
   return 0;

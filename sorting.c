@@ -33,6 +33,20 @@ void bubbleSort(int arr[], int n){
   }
 }
 
+void insertionSort(int arr[], int n){
+  int i, j, key;
+
+  for(i = 1; i < n; i++){
+    key = arr[i];
+    j = i;
+    while(j > 0 && key < arr[j-1]){
+      arr[j] = arr[j-1];
+      j--;
+    }
+    arr[j] = key;
+  }
+}
+
 void print_array(int arr[], int n){
   int i;
   for(i = 0; i < n; i++){
