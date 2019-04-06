@@ -52,7 +52,7 @@ int peek(int *x, STACK *s){
     return 0;
   else{
     adr = s -> index - 1;
-    *x  = s -> data[adr];
+   *x  = s -> data[adr];
     return 1;
   }
 }
@@ -71,8 +71,6 @@ void print_stack(int type, STACK *s){
   while( i < s -> index){
     if(type == 11) // op stack
       printf("%c\t", s -> data[i]);
-    else
-      printf("%d\t", s -> data[i]);
     i++;
   }
   printf("\n End of stack\n");
