@@ -7,4 +7,4 @@ main: $(obj)
 
 .PHONY: clean
 clean:
-	rm -f $(obj) main mian.exe
+	rm -f $(obj) main main.exe
