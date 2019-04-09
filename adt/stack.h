@@ -3,17 +3,19 @@
 
 #define STACK_SIZE 100
 
+typedef int StackUnit;
+
 typedef struct {
   int index;
-  int data[STACK_SIZE];
+  StackUnit data[STACK_SIZE];
 } STACK ;
 
 STACK * initStack();
-int isEmpty(STACK *);
-int isFull(STACK *);
-int push(int, STACK *);
-int pop(int *, STACK *);
-int peek(int *, STACK *);
+StackUnit isEmpty(STACK *);
+StackUnit isFull(STACK *);
+StackUnit push(StackUnit, STACK *);
+StackUnit pop(StackUnit *, STACK *);
+StackUnit peek(StackUnit *, STACK *);
 void print_stack(int, STACK *);
 
 #endif
