@@ -9,11 +9,11 @@ typedef struct queue{
   int count;
   int front;
   int rear;
-  QueueUnit entry[MAXQUEUE];
+  QueueUnit data[MAXQUEUE];
 } Queue;
 
 Queue * initQueue();
-void append(QueueUnit, Queue *);
+void appendQueue(QueueUnit, Queue *);
 void serve(QueueUnit *, Queue *);
 int queueSize(Queue *);
 int queueEmpty(Queue *);

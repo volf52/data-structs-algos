@@ -12,22 +12,22 @@ STACK * initStack(){
   return s;
 }
 
-int isEmpty(STACK *s){
+int stackEmpty(STACK *s){
   if(s -> index == 0)
     return 1;
   else
     return 0;
 }
 
-int isFull(STACK *s){
+int stackFull(STACK *s){
   if(s -> index == 0)
     return 1;
   else
     return 0;
 }
 
-int push(int x, STACK *s){
-  if(isFull(s)){
+int push(StackUnit x, STACK *s){
+  if(stackFull(s)){
     printf("Stack is full...Can't push item.\n");
     return 0;
   }
@@ -37,8 +37,8 @@ int push(int x, STACK *s){
   }
 }
 
-int pop(int *x, STACK *s){
-  if(isEmpty(s))
+int pop(StackUnit *x, STACK *s){
+  if(stackEmpty(s))
     return 0;
   else{
     *x = s -> data[-- s -> index];
@@ -46,9 +46,9 @@ int pop(int *x, STACK *s){
   }
 }
 
-int peek(int *x, STACK *s){
+int peek(StackUnit *x, STACK *s){
   int adr;
-  if(isEmpty(s))
+  if(stackEmpty(s))
     return 0;
   else{
     adr = s -> index - 1;

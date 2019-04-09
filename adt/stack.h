@@ -11,11 +11,11 @@ typedef struct {
 } STACK ;
 
 STACK * initStack();
-StackUnit isEmpty(STACK *);
-StackUnit isFull(STACK *);
-StackUnit push(StackUnit, STACK *);
-StackUnit pop(StackUnit *, STACK *);
-StackUnit peek(StackUnit *, STACK *);
+int stackEmpty(STACK *);
+int stackFull(STACK *);
+int push(StackUnit, STACK *);
+int pop(StackUnit *, STACK *);
+int peek(StackUnit *, STACK *);
 void print_stack(int, STACK *);
 
 #endif
