@@ -189,3 +189,40 @@ int partition(dType arr[], int low, int high)
     swap(&arr[i + 1], &arr[high]);
     return i + 1;
 }
+
+void heapsort(dType arr[], int n)
+{
+    int i;
+    for (i = n / 2 - 1; i >= 0; i--)
+        heapify(arr, n, i);
+
+    for (i = n - 1; i >= 0; i--)
+    {
+        swap(&arr[0], &arr[i]);
+        heapify(arr, i, 0);
+    }
+}
+
+void heapify(dType arr[], int n, int i)
+{
+    int largest, l, r;
+    largest = i; // root
+
+    l = 2 * i + 1;
+    r = 2 * i + 2;
+
+    // if left child is larger than root
+    if (l < n && arr[l] > arr[largest])
+        largest = l;
+
+    // if right child is larger than largest
+    if (r < n && arr[r] > arr[largest])
+        largest = r;
+
+    // if largest is not root
+    if (largest != i)
+    {
+        swap(&arr[i], &arr[largest]);
+        heapify(arr, n, largest);
+    }
+}

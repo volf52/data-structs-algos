@@ -13,5 +13,7 @@ void mergesort(dType *, int, int);
 void merge(dType *, int, int, int);
 void quicksort(dType *, int, int);
 int partition(dType *, int, int);
+void heapsort(dType *, int);
+void heapify(dType *, int, int);
 
 #endif
