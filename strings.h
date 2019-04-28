@@ -3,5 +3,6 @@
 
 void patSearch(char *, char *);
 void optimPatSearch(char *, char *);
+void robinKarp(char *, char *, int);
 
 #endif

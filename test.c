@@ -15,9 +15,9 @@ int main()
   // quicksort(arr, 0, n - 1);
   // print_array(arr, n);
 
-  patSearch(pat, str);
-  printf("============\n");
   optimPatSearch(pat, str);
+  printf("============\n");
+  robinKarp(pat, str, 101);
 
   return 0;
 }
