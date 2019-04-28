@@ -7,8 +7,8 @@ typedef int StackUnit;
 
 typedef struct
 {
-  int index;
-  StackUnit data[STACK_SIZE];
+    int index;
+    StackUnit data[STACK_SIZE];
 } STACK;
 
 STACK *initStack();

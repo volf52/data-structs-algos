@@ -7,10 +7,10 @@ typedef int QueueUnit;
 
 typedef struct queue
 {
-  int count;
-  int front;
-  int rear;
-  QueueUnit data[MAXQUEUE];
+    int count;
+    int front;
+    int rear;
+    QueueUnit data[MAXQUEUE];
 } Queue;
 
 Queue *initQueue();
