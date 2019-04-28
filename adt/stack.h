@@ -5,12 +5,13 @@
 
 typedef int StackUnit;
 
-typedef struct {
+typedef struct
+{
   int index;
   StackUnit data[STACK_SIZE];
-} STACK ;
+} STACK;
 
-STACK * initStack();
+STACK *initStack();
 int stackEmpty(STACK *);
 int stackFull(STACK *);
 int push(StackUnit, STACK *);

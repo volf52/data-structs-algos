@@ -5,16 +5,17 @@
 
 typedef int QueueUnit;
 
-typedef struct queue{
+typedef struct queue
+{
   int count;
   int front;
   int rear;
   QueueUnit data[MAXQUEUE];
 } Queue;
 
-Queue * initQueue();
-void appendQueue(QueueUnit, Queue *);
-void serve(QueueUnit *, Queue *);
+Queue *initQueue();
+void enqueue(QueueUnit, Queue *);
+void dequeue(QueueUnit *, Queue *);
 int queueSize(Queue *);
 int queueEmpty(Queue *);
 int queueFull(Queue *);

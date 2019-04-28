@@ -1,11 +1,15 @@
 #ifndef SORTING_H
 #define SORTING_H
 
-void swap(int *, int *);
-void print_array(int *, int);
-void selectionSort(int *, int);
-void bubbleSort(int *, int);
-void insertionSort(int *, int);
+typedef int dType;
 
+void swap(dType *, dType *);
+void print_array(dType *, int);
+void selectionSort(dType *, int);
+void bubbleSort(dType *, int);
+void insertionSort(dType *, int);
+void shellsort(dType *, int);
+void mergesort(dType *, int);
+void quicksort(dType *, int);
 
 #endif
