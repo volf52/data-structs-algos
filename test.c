@@ -15,7 +15,7 @@ int main()
   // quicksort(arr, 0, n - 1);
   // print_array(arr, n);
 
-  optimPatSearch(pat, str);
+  bayerMoore(pat, str);
   printf("============\n");
   robinKarp(pat, str, 101);
 
