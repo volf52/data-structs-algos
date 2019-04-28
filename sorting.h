@@ -11,6 +11,7 @@ void insertionSort(dType *, int);
 void shellsort(dType *, int);
 void mergesort(dType *, int, int);
 void merge(dType *, int, int, int);
-void quicksort(dType *, int);
+void quicksort(dType *, int, int);
+int partition(dType *, int, int);
 
 #endif

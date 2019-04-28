@@ -158,3 +158,34 @@ void merge(dType arr[], int l, int m, int r)
         k++;
     }
 }
+
+void quicksort(dType arr[], int low, int high)
+{
+    int pi;
+    if (low < high)
+    {
+        pi = partition(arr, low, high);
+        quicksort(arr, low, pi - 1);
+        quicksort(arr, pi + 1, high);
+    }
+}
+
+int partition(dType arr[], int low, int high)
+{
+    int pivot, i, j;
+
+    pivot = arr[high];
+    i = low - 1;
+
+    for (j = low; j < high; j++)
+    {
+        if (arr[j] <= pivot)
+        {
+            i++;
+            swap(&arr[i], &arr[j]);
+        }
+    }
+
+    swap(&arr[i + 1], &arr[high]);
+    return i + 1;
+}
