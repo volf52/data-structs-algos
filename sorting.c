@@ -90,6 +90,71 @@ void shellsort(dType arr[], int n)
     }
 }
 
-void mergesort(dType arr[], int n)
+void mergesort(dType arr[], int l, int r)
 {
+    int m;
+
+    if (l < r)
+    {
+        m = l + (r - l) / 2;
+        mergesort(arr, l, m);
+        mergesort(arr, m + 1, r);
+        merge(arr, l, m, r);
+    }
+}
+
+void merge(dType arr[], int l, int m, int r)
+{
+    int i, j, k;
+    int n1 = m - l + 1;
+    int n2 = r - m;
+
+    dType *L, *R;
+
+    L = (dType *)malloc(sizeof(dType) * n1);
+    R = (dType *)malloc(sizeof(dType) * n2);
+    if ((L == NULL) || (R == NULL))
+    {
+        printf("MergeSort : Couldn't allocate memory for sub arrays\n");
+        exit(-1);
+    }
+
+    for (i = 0; i < n1; i++)
+        L[i] = arr[l + i];
+
+    for (j = 0; j < n2; j++)
+        R[j] = arr[m + 1 + j];
+
+    i = 0; // initial index of first sub array
+    j = 0; // initial index of second sub array
+    k = l; // initial index of merged sub array
+
+    while (i < n1 && j < n2)
+    {
+        if (L[i] <= R[j])
+        {
+            arr[k] = L[i];
+            i++;
+        }
+        else
+        {
+            arr[k] = R[j];
+            j++;
+        }
+        k++;
+    }
+
+    while (i < n1)
+    {
+        arr[k] = L[i];
+        i++;
+        k++;
+    }
+
+    while (j < n2)
+    {
+        arr[k] = R[j];
+        j++;
+        k++;
+    }
 }

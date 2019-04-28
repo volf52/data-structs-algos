@@ -9,7 +9,8 @@ void selectionSort(dType *, int);
 void bubbleSort(dType *, int);
 void insertionSort(dType *, int);
 void shellsort(dType *, int);
-void mergesort(dType *, int);
+void mergesort(dType *, int, int);
+void merge(dType *, int, int, int);
 void quicksort(dType *, int);
 
 #endif
