@@ -24,7 +24,7 @@ int stackEmpty(STACK *s)
 
 int stackFull(STACK *s)
 {
-    if (s->index == 0)
+    if (s->index >= STACK_SIZE)
         return 1;
     else
         return 0;

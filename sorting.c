@@ -38,14 +38,21 @@ void selectionSort(dType arr[], int n)
 
 void bubbleSort(dType arr[], int n)
 {
-    int i, j;
-    for (i = 0; i < n; i++)
+    int i, j, xchg;
+    i = 0;
+    xchg = 1;
+    while (i < n - 1 && xchg)
     {
+        xchg = 0;
         for (j = 0; j < n - i - 1; j++)
         {
-            if (arr[j + 1] < arr[j])
+            if (arr[j] > arr[j + 1])
+            {
                 swap(&arr[j], &arr[j + 1]);
+                xchg = 1;
+            }
         }
+        i++;
     }
 }
 
@@ -203,13 +210,13 @@ void heapsort(dType arr[], int n)
     }
 }
 
-void heapify(dType arr[], int n, int i)
+void heapify(dType arr[], int n, int parent)
 {
     int largest, l, r;
-    largest = i; // root
+    largest = parent;
 
-    l = 2 * i + 1;
-    r = 2 * i + 2;
+    l = 2 * parent + 1;
+    r = 2 * parent + 2;
 
     // if left child is larger than root
     if (l < n && arr[l] > arr[largest])
@@ -219,10 +226,10 @@ void heapify(dType arr[], int n, int i)
     if (r < n && arr[r] > arr[largest])
         largest = r;
 
-    // if largest is not root
-    if (largest != i)
+    // if largest is not parent
+    if (largest != parent)
     {
-        swap(&arr[i], &arr[largest]);
+        swap(&arr[parent], &arr[largest]);
         heapify(arr, n, largest);
     }
 }

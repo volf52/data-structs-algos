@@ -52,4 +52,5 @@ Mkfile.old
 dkms.conf
 
 .vscode
-main
+graphNet
+.mypy_cache

@@ -12,7 +12,7 @@ int main()
   char *pat = "AABA";
 
   print_array(arr, n);
-  heapsort(arr, n);
+  bubbleSort(arr, n);
   print_array(arr, n);
 
   // bayerMoore(pat, str);
